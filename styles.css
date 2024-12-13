@@ -1,0 +1,199 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgba(28, 27, 27, 0.5);
+    color: white;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 30px 15px; /* Adjust padding for smaller screens */
+    background: rgba(15, 11, 11, 0.829);
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 20px;
+    font-size: 1.2rem; /* Slightly smaller for readability */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    margin-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    background: #e67e07;
+    border-color: #ffff;
+}
+
+/* Section Styles */
+section {
+    padding: 20px 15px;
+    width: 90%;
+    max-width: 900px;
+    margin: 30px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Adjust width for smaller screens */
+    height: 3px;
+    background: #000000;
+    margin: 10px auto 0;
+}
+
+/* Flip Text */
+.flip-text-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.flip-text {
+    font-size: 1.5rem;
+    color: #e67e07;
+    text-shadow:2px 2px 2px #f6f0f0;
+    white-space: nowrap;
+    animation: moveText 9s linear 2;
+    
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Fixed Button */
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0cacc8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.fixed-button:hover {
+    background-color: rgb(244, 103, 51);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Smaller font for mobile screens */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .link-icons {
+        margin-top: 120px; 
+      }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .link-icons {
+        margin-top: 80px;  /* Adjust the value as needed */
+      }
+    
+
+}
+
+
+.link-icons{
+    margin-top: 180px;
+}
+
+
